@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <title>Tianxiang Chang--iWatch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/site.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Tianxiang Chang</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-manue"><a href="index.html"> Home </a>
+                    </li>
+                    <li class="navbar-manue"><a href="projects.html"> Projects </a>
+                    </li>
+                    <li class="active navbar-manue"><a href="#"> About me </a>
+                    </li>
+                    <li class="navbar-manue"><a href="contact.html"> Contact </a>
+                    </li>
+                    <li class="navbar-manue-last"><a href="cv.html"> Resume </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container topspacer">
+        <div class="row">
+            <img src="images/sanjose.jpeg" width="100%">
+            <iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe>
+        </div>
+
+
+        <div class="row">
+            <div class="contact-form">
+                <div class="col-md-10 col-md-offset-1">
+
+                    <div class="col-md-4 contact-form-bg">
+
+                        <h3>About</h3>
+                        <p class="form-widge">Full Stack Web Developer</p>
+
+
+                        <div>
+                            <p id="pcontent" style="visibility: hidden;">You can also find me on: </p>
+
+                            <nav class="circular-menu">
+
+                                <div class="circle open">
+                                    <a href="index.html" class="fa fa-home fa-3x" style="left: 50%; top: 15%;"></a>
+                                    <a href="https://www.facebook.com/profile.php?id=100008873076957" target="_blank" class="fa fa-facebook fa-3x" style="left: 77.3641%; top: 28.1779%;"></a>
+                                    <a href="https://twitter.com/changtx1991" target="_blank" class="fa fa-twitter fa-3x" style="left: 84.1225%; top: 57.7882%;"></a>
+                                    <a href="https://github.com/Changtx" target="_blank" class="fa fa-linkedin fa-3x" style="left: 65.1859%; top: 81.5339%;"></a>
+                                    <a href="https://github.com/hanweifish" target="_blank" class="fa fa-github fa-3x" style="left: 34.8141%; top: 81.5339%;"></a>
+                                    <a href="mailto:hanweihw@gmail.com?subject=Hello Wei" class="fa fa-envelope fa-2x" style="left: 15.8775%; top: 57.7882%;"></a>
+                                    <a href="https://www.pinterest.com/hanweihw" target="_blank" class="fa fa-pinterest fa-3x" style="left: 22.6359%; top: 28.1779%;"></a>
+                                </div>
+
+                                <a href="" class="menu-button" style="opacity: 1;" ><img src="img/tianxiangchang.png" class="img-circle" width="100" height="100">
+                                </a>
+
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 contact-form-bg">
+                        <p><span class="contact-font"><strong>HELLO </strong></span><span class="contact-font-small">welcome to my portfolio.<br></span>
+                        </p>
+                        <div class="about_content">
+                            I am a Web Developer lived in Los Angeles. I love beautiful and clear coding and design. I like challenge and I am a passionate frontend web developer with capability to create creative and state of art website for any realistic issue.
+
+                        </div>
+                        <div class="about_content">
+                            I develop my web projects with a strict working methodology, starting with the use scenarios, the different creative phases until the final project. I am quite demanding with my projects with a strong eye for details. I am also a team worker, and enjoy the collaboration and learning process with any person in the team.
+                        </div>
+
+                        <div>
+                            <div class="about_title">Skills</div>
+                            <ul class="about_skill_list">
+                                <li>HTML5/CSS3</li>
+                                <li>JavaScript/jQuery/AJAX</li>
+                                <li>Node.js/Expressjs/Kraken </li>
+                                <li>Dustjs/EJS Template</li>
+                                <li>AngularJS</li>
+                                <li>Bootstrap/LESS</li>
+                                <li>MongoDB/MySQL</li>
+                                <li>Python/GAE</li>
+                                <li>Django/Jinja2</li>
+                                <li>ASP</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="center">
+            <hr>
+            <p class="text-center">© Copyright 2015 Tianxiang Chang</p>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script>
+        var items = document.querySelectorAll('.circle a');
+
+        for (var i = 0, l = items.length; i < l; i++) {
+            items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+            items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+        }
+
+        document.querySelector('.menu-button').onclick = function(e) {
+            e.preventDefault();
+            document.querySelector('.circle').classList.toggle('open');
+            $("#pcontent").css('visibility', 'hidden');
+        }
+    </script>
+    <script>
+        function blink() {
+            $('.menu-button').delay(100).fadeTo(100, 0.4).delay(100).fadeTo(100, 1);
+        }
+
+        $(document).ready(function() {
+            for (var i = 0; i < 5; i++) {
+                blink();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
